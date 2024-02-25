@@ -10,6 +10,41 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 207, 207, 207),
+      body: Stack(
+        alignment: Alignment.topCenter,
+        children: [
+          Container(
+            height: MediaQuery.of(context).size.height * .33,
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Color(0xFFB6185B),
+                  Color(0xFF851D92),
+                ],
+              ),
+            ),
+            child: const Center(
+              child: CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('assets/imgs/emblem.png'),
+              ),
+            ),
+          ),
+          Container(
+            margin: EdgeInsets.fromLTRB(
+                30, MediaQuery.of(context).size.height * .25, 30, 0),
+            height: MediaQuery.of(context).size.height * .70,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
