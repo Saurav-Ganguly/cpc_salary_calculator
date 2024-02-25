@@ -1,3 +1,4 @@
+import 'package:cpc_salary_calculator/entry_form.dart';
 import 'package:flutter/material.dart';
 
 class MainPage extends StatefulWidget {
@@ -31,14 +32,27 @@ class _MainPageState extends State<MainPage> {
                     Color.fromARGB(255, 89, 165, 92)
                   ]),
             ),
-            child: const Center(
-              child: CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage('assets/imgs/emblem.png'),
-              ),
+            child: const Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: CircleAvatar(
+                    radius: 50,
+                    backgroundImage: AssetImage('assets/imgs/emblem.png'),
+                  ),
+                ),
+                Text(
+                  "7th CPC Salary Calculator",
+                  style: TextStyle(
+                      fontSize: 23,
+                      fontWeight: FontWeight.bold,
+                      color: Color.fromARGB(255, 92, 92, 92)),
+                )
+              ],
             ),
           ),
           Container(
+            padding: const EdgeInsets.all(20),
             margin: EdgeInsets.fromLTRB(
                 30, MediaQuery.of(context).size.height * .25, 30, 0),
             height: MediaQuery.of(context).size.height * .70,
@@ -46,6 +60,7 @@ class _MainPageState extends State<MainPage> {
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
+            child: const EntryForm(),
           ),
         ],
       ),
