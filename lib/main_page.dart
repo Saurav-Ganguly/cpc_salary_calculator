@@ -22,10 +22,6 @@ class _MainPageState extends State<MainPage> {
               gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
-                  // colors: [
-                  //   Color(0xFFB6185B),
-                  //   Color(0xFF851D92),
-                  // ],
                   colors: [
                     Color.fromARGB(255, 177, 107, 2),
                     Color.fromARGB(255, 252, 240, 240),
@@ -54,9 +50,16 @@ class _MainPageState extends State<MainPage> {
           Container(
             padding: const EdgeInsets.all(20),
             margin: EdgeInsets.fromLTRB(
-                30, MediaQuery.of(context).size.height * .25, 30, 0),
-            height: MediaQuery.of(context).size.height * .70,
+                30, MediaQuery.of(context).size.height * .28, 30, 0),
+            height: MediaQuery.of(context).size.height * .60,
             decoration: BoxDecoration(
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 4.0,
+                  spreadRadius: 2.0,
+                )
+              ],
               color: Colors.white,
               borderRadius: BorderRadius.circular(10),
             ),
