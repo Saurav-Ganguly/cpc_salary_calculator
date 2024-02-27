@@ -1,4 +1,5 @@
 import 'package:cpc_salary_calculator/main_page.dart';
+import 'package:cpc_salary_calculator/salary_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
